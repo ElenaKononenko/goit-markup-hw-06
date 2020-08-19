@@ -25,6 +25,8 @@ html {
   --footer-link-bg-color: rgba(255, 255, 255, 0.1);
   --svg-color: #afb1b8;
   --hover-color-blue:rgba(33, 150, 243, 0.9);
+  --form-text-color:rgba(117, 117, 117, 0.5);
+  --padding-main: 80px;
 }
 
 /* Остальной код */
@@ -98,6 +100,17 @@ body {
 }
 
 /* шапка */
+header{
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: var(--primary-white-color);
+  z-index: 99;
+}
+main{
+  padding-top: var(--padding-main);
+}
 .header-nav {
   border-bottom: 1px solid #ECECEC;
 }
@@ -340,10 +353,26 @@ address .link:not(:last-child) {
 .footer .form {
   flex-basis: 570px;
 }
+
 .footer .form-icon {
   margin-left: 10px;
 }
+.form-email{
+  display: flex;
+  justify-content: space-between;
+}
+.input-footer-email{
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
 
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--footer-link-color);
+  background-color: inherit;
+  border:1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
 /* футер^ */
 
 /* main index */
@@ -802,10 +831,10 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   max-width: 528px;
   height: 581px;
   /* чтоб в мобилку влезло */
+  padding: 40px;
   background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
 }
 /* 
 @keyframes change-opacity {
@@ -832,4 +861,61 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
   opacity: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Form */
+.input{
+
+width: 100%;
+max-width: 448px;
+border: 1px solid rgba(33, 33, 33, 0.2);
+box-sizing: border-box;
+border-radius: 4px;
+
+
+}
+
+.input-item{
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.input.comment {
+  height: 120px;
+  resize: none;
+
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+.input.comment::placeholder{
+  color: var(--form-text-color);
+}
+
+.form-title{
+
+font-weight: 700;
+font-size: 20px;
+line-height: 1.15;
+text-align: center;
+color: var(--title-text-color);
+
+margin-top: 0;
+margin-bottom: 12px;
+}
+.label-text {
+  
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+.form-agree{
+  margin-bottom: 30px;
+}
+
+.form-sub-btn{
+  display: flex;
+  justify-content: center;
+}
+.link-agree{
+  color: var(--accent-color);
 }
