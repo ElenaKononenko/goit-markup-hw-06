@@ -473,33 +473,46 @@
             <div>
               
               <label class="label-text" for="user-name"> Имя </label>
-              <input class="input input-item" type="text" name="user-name" id="user-name">
-
+              <div class="icon-form-box">
+               <input class="input input-item" type="text" name="user-name" id="user-name" placeholder=" " required >
+               <svg class="icon-form-wrappler" width="12" height="12">
+                 <use href="./img/symbol-defs111.svg#person-form"></use>
+               </svg>
+              </div>
             </div>
             <div>
               <label class="label-text" for="user-tel">Телефон </label>
-                <input class="input input-item" type="tel" name="user-tel" id="user-tel">
+              <div class="icon-form-box">
+                  <input class="input input-item" type="tel" pattern="^[ 0-9]+$" name="user-tel" id="user-tel" >
+                  <svg class="icon-form-wrappler"  width="12" height="12">
+                    <use href="./img/symbol-defs111.svg#phone-form"></use>
+                  </svg>
+              </div>
             </div>
 
             <div> 
                <label class="label-text" for="user-email">Почта</label>
-              <input class="input input-item" type="email" name="user-email" id="user-email">
-            
+               <div class="icon-form-box">
+                  <input class="input input-item" type="email" name="user-email" id="user-email">
+                  <svg class="icon-form-wrappler" width="12" height="12">
+                    <use href="./img/symbol-defs111.svg#email-form"></use>
+                  </svg>
+                </div>
             </div>
-
+<!-- коммент -->
             <div> <label class="label-text" for="comment" >Комментарий 
                  </label>
-                   <textarea class="input comment" name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст">
-
-                 </textarea>
+                   <textarea class="input comment" name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
             </div>
               
-              <div class="form-agree">
-                  <input type="checkbox" name="agree" id="agree" checked>
-                  <label class="label-agree" for="agree">Соглашаюсь с рассылкой и принимаю <a class="link-agree" href="#">Условия договора</a>
-                  </label>
-
-              </div>
+             
+                <label class="label-agree">
+                      <input class="input-agree visually-hidden" type="checkbox" name="agree"  checked>
+                      <span class="checkbox"></span>
+                      
+                      Соглашаюсь с рассылкой и принимаю <a class="link-agree" href="#">Условия договора</a>
+                </label> 
+              
               <div class="form-sub-btn">
                 <button class="button " type="submit">Отправить</button>
               </div>
